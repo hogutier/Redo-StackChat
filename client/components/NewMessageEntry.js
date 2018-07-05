@@ -17,11 +17,11 @@ class NewMessageEntry extends Component {
     evt.preventDefault()
     const content = this.props.newMessageEntry
     const channelId = this.props.channelId
-    this.props.postMessage({ content, channelId })
+    const nameEntry = this.props.nameEntry
+    this.props.postMessage({ content, channelId, name: nameEntry })
   }
 
   render () {
-    console.log("PROPS", this.props)
     return (
       <form id="new-message-form" onSubmit={this.handleSubmit}>
         <div className="input-group input-group-lg">
@@ -44,6 +44,7 @@ class NewMessageEntry extends Component {
 
 const mapStateToProps = (state) => {
   return {
+    ...state,
     newMessageEntry: state.newMessageEntry
   }
 }

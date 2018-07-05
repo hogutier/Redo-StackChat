@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
-import MessagesList from './MessagesList';
+//import MessagesList from './MessagesList';
+import ConnectedMessagesList from './MessagesList'
 
 export default class Main extends Component {
 
@@ -13,7 +14,7 @@ export default class Main extends Component {
         <Navbar />
         <main>
           <Switch>
-            <Route path="/channels/:channelId" component={MessagesList} />
+            <Route path="/channels/:channelId" component={ConnectedMessagesList} />
             <Redirect to="/channels/1" />
           </Switch>
         </main>

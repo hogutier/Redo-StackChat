@@ -78,7 +78,6 @@ const messages = [
   { authorId: id(), content: 'Dogs are great!', channelId: 3 },
   { authorId: id(), content: 'Cats are also great!', channelId: 3 },
   { authorId: id(), content: 'Why must we fight so?', channelId: 3 },
-  { authorId: id(), content: 'I want to get tacos!', channelId: 4 },
   { authorId: id(), content: 'I want to get salad!', channelId: 4 },
   { authorId: id(), content: 'I want a taco salad!', channelId: 4 }
 ];

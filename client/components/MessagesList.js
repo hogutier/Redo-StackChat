@@ -21,7 +21,7 @@ class MessagesList extends Component {
         <ul className="media-list">
           { filteredMessages.map(message => <Message message={message} key={message.id} />) }
         </ul>
-        <NewMessageEntry />
+        <NewMessageEntry channelId={channelId} />
       </div>
     );
   }
@@ -39,6 +39,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const ConnectedMessagesList = connect(mapStateToProps, mapDispatchToProps)(MessagesList)
-export default ConnectedMessagesList
+export default connect(mapStateToProps, mapDispatchToProps)(MessagesList)
 
